@@ -2,17 +2,17 @@ const removeFromArray = function(arrayOfElements, elementsToRemove) {
 
   // Create an array from parameters passed as elements
   // to be removed
-  // Starting from index 1 because of the first parameter which is 
+  // Starting from index i+1 because of the first parameter which is 
   // the array to filter.
   let args = [];
-  for (let i=1; i<arguments.length; i++){
-    args[i] = arguments[i];
+  let filteredArray;
+  for (let i=0; i<arguments.length - 1; i++){
+    args[i] = arguments[i+1];
   }
 
-  args.forEach((el)=>{
-    
-  })
-  
+
+  return arrayOfElements.filter((element) => !args.includes(element))
+
 };
 
 // Per ogni elemento in args, 
