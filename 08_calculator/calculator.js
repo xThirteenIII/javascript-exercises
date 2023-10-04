@@ -27,8 +27,14 @@ const power = function(firstNumber, secondNumber) {
   return Math.pow(firstNumber, secondNumber)
 };
 
-const factorial = function() {
+const factorial = function(number) {
 	
+  if (number == 0){
+    return 1
+  }else{
+
+   return number * factorial(number - 1)
+  }
 };
 
 // Do not edit below this line
