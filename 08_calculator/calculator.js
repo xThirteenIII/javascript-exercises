@@ -8,8 +8,11 @@ const subtract = function(firstNumber, secondNumber) {
   return firstNumber - secondNumber
 };
 
-const sum = function() {
-	
+const sum = function(arrayOfNumbers) {
+
+  let sum = 0;
+  arrayOfNumbers.forEach((number) => sum += number)
+  return sum
 };
 
 const multiply = function() {
