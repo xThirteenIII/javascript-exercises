@@ -15,8 +15,11 @@ const sum = function(arrayOfNumbers) {
   return sum
 };
 
-const multiply = function() {
+const multiply = function(arrayOfNumbers) {
 
+  let result = 1;
+  arrayOfNumbers.forEach((number) => result *= number)
+  return result
 };
 
 const power = function() {
