@@ -1,15 +1,16 @@
 const palindromes = function (phrase) {
   
+  let toLower = "";
   if (typeof phrase == "string"){
-    phrase.toLowerCase()
+    toLower = phrase.toLowerCase()
   }else {
     return "ERROR"
   }
-  let punctuationless = phrase.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"");
-  let finalString = punctuationless.replace(/\s{2,}/g," ");
-  reversedPhrase = finalString.split().reverse().join()
+  let punctuationless = toLower.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"");
+  let spaceless = punctuationless
+  reversedPhrase = punctuationless.split("").reverse().join("")
 
-  return finalString == reversedPhrase
+  return reversedPhrase == toLower
 };
 
 // Do not edit below this line
