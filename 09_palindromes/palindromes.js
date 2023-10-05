@@ -7,10 +7,10 @@ const palindromes = function (phrase) {
     return "ERROR"
   }
   let punctuationless = toLower.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"");
-  let spaceless = punctuationless
-  reversedPhrase = punctuationless.split("").reverse().join("")
+  let spaceless = punctuationless.replace(/ /g, "")
+  reversedPhrase = spaceless.split("").reverse().join("")
 
-  return reversedPhrase == toLower
+  return reversedPhrase == spaceless
 };
 
 // Do not edit below this line
